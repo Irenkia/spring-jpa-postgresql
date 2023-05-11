@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TutorialRepository  extends JpaRepository<Tutorial, Long> {
+public interface TutorialRepository  extends JpaRepository<Tutorial, Integer> {
      List<Tutorial> findByTitleContaining(String title);
 
 //    @Query("SELECT t FROM Tutorial t WHERE t.title like %?1%")

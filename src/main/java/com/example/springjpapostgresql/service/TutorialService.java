@@ -18,7 +18,7 @@ public class TutorialService {
         return tutorialRepository.findAll();
     }
 
-    public Optional<Tutorial> getTutorialByIdr(long id) {
+    public Optional<Tutorial> getTutorialByIdr(Integer id) {
         return tutorialRepository.findById(id);
     }
 
@@ -27,7 +27,7 @@ public class TutorialService {
     }
 
 
-    public void deleteTutorial(long id) {
+    public void deleteTutorial(Integer id) {
         tutorialRepository.deleteById(id);
     }
 

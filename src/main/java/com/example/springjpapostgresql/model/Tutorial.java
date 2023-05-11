@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Tutorial {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;
 
     @Column(name = "title")
     private String title;

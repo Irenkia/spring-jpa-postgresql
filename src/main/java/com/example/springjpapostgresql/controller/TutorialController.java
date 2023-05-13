@@ -21,6 +21,7 @@ public class TutorialController {
     private final TutorialRepository tutorialRepository;
 
     @GetMapping("/tutorials")
+    @CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
         try {
             List<Tutorial> tutorials = new ArrayList<Tutorial>();
@@ -41,6 +42,7 @@ public class TutorialController {
     }
 
     @GetMapping("/tutorials/{id}")
+    @CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<Tutorial> getTutorialById(@PathVariable("id") Integer id) {
         Optional<Tutorial> tutorialData = tutorialRepository.findById(id);
 
@@ -52,6 +54,7 @@ public class TutorialController {
     }
 
     @PostMapping("/tutorials")
+    @CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<Tutorial> createTutorial(@RequestBody Tutorial tutorial) {
         try {
             Tutorial _tutorial = tutorialRepository
@@ -63,6 +66,7 @@ public class TutorialController {
     }
 
     @PutMapping("/tutorials/{id}")
+    @CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<Tutorial> updateTutorial(@PathVariable("id") Integer id, @RequestBody Tutorial tutorial) {
         Optional<Tutorial> tutorialData = tutorialRepository.findById(id);
 
@@ -78,6 +82,7 @@ public class TutorialController {
     }
 
     @DeleteMapping("/tutorials/{id}")
+    @CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<HttpStatus> deleteTutorial(@PathVariable("id") Integer id) {
         try {
             tutorialRepository.deleteById(id);
@@ -88,6 +93,7 @@ public class TutorialController {
     }
 
     @DeleteMapping("/tutorials")
+    @CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<HttpStatus> deleteAllTutorials() {
         try {
             tutorialRepository.deleteAll();
@@ -99,6 +105,7 @@ public class TutorialController {
     }
 
     @GetMapping("/tutorials/published")
+    @CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<List<Tutorial>> findByPublished() {
         try {
             List<Tutorial> tutorials = tutorialRepository.findByPublished(true);

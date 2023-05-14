@@ -18,7 +18,7 @@ public class TutorialService {
         return tutorialRepository.findAll();
     }
 
-    public Optional<Tutorial> getTutorialByIdr(Integer id) {
+    public Optional<Tutorial> getTutorialById(Integer id) {
         return tutorialRepository.findById(id);
     }
 

@@ -1,6 +1,6 @@
 spring:
   datasource:
-    username: irenkia@crudserver
+    username: irenkia
     password: superhero@54321
     url: jdbc:sqlserver://crudserver.database.windows.net:1433;database=crud;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
   jpa:
